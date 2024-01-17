@@ -2,7 +2,12 @@ const express = require("express")
 const cors = require("cors")
 const app = express()
 
-app.use(cors())
+app.use(cors(corsOptions))
+
+var corsOptions = {
+    origin: ["https://depfront.vercel.app/"]
+  };
+
 app.use(express.json())
 
 //Install NODEMAILER
